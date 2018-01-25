@@ -7,7 +7,7 @@
 
 namespace Spryker\Zed\CmsNavigationConnector\Business\Model;
 
-interface NavigationNodesIsActiveUpdaterInterface
+interface NavigationNodeIsActiveUpdaterInterface
 {
     /**
      * @param int $idCmsPage
