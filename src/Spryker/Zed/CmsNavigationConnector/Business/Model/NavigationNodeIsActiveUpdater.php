@@ -21,10 +21,6 @@ class NavigationNodeIsActiveUpdater implements NavigationNodeIsActiveUpdaterInte
      */
     protected $navigationNodeReader;
 
-    /**
-     * @param \Spryker\Zed\CmsNavigationConnector\Dependency\Facade\CmsNavigationConnectorToNavigationFacadeInterface $navigationFacade
-     * @param \Spryker\Zed\CmsNavigationConnector\Business\Model\NavigationNodeReaderInterface $navigationNodeReader
-     */
     public function __construct(CmsNavigationConnectorToNavigationFacadeInterface $navigationFacade, NavigationNodeReaderInterface $navigationNodeReader)
     {
         $this->navigationFacade = $navigationFacade;

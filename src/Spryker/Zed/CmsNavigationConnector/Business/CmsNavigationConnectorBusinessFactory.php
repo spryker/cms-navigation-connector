@@ -59,9 +59,6 @@ class CmsNavigationConnectorBusinessFactory extends AbstractBusinessFactory
         return new NavigationNodeIsActiveUpdater($this->getNavigationFacade(), $this->createNavigationNodeReader());
     }
 
-    /**
-     * @return \Spryker\Zed\CmsNavigationConnector\Business\Writer\Navigation\NavigationNodeWriterInterface
-     */
     public function createNavigationNodesWriter(): NavigationNodeWriterInterface
     {
         return new NavigationNodeWriter($this->getNavigationFacade(), $this->createNavigationNodeReader());

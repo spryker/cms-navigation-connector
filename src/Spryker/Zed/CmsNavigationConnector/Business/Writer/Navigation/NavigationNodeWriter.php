@@ -22,10 +22,6 @@ class NavigationNodeWriter implements NavigationNodeWriterInterface
      */
     protected $navigationNodeReader;
 
-    /**
-     * @param \Spryker\Zed\CmsNavigationConnector\Dependency\Facade\CmsNavigationConnectorToNavigationFacadeInterface $navigationFacade
-     * @param \Spryker\Zed\CmsNavigationConnector\Business\Model\NavigationNodeReaderInterface $navigationNodeReader
-     */
     public function __construct(
         CmsNavigationConnectorToNavigationFacadeInterface $navigationFacade,
         NavigationNodeReaderInterface $navigationNodeReader
@@ -34,11 +30,6 @@ class NavigationNodeWriter implements NavigationNodeWriterInterface
         $this->navigationNodeReader = $navigationNodeReader;
     }
 
-    /**
-     * @param int $idCmsPage
-     *
-     * @return void
-     */
     public function deleteNavigationNodesByIdCmsPage(int $idCmsPage): void
     {
         $navigationNodes = $this->navigationNodeReader->getNavigationNodesFromCmsPageId($idCmsPage);

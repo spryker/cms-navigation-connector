@@ -31,25 +31,16 @@ class CmsNavigationConnectorFacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testSetNavigationNodeToActiveWhenCmsIsActive(): void
     {
         $this->runUpNavigationNodeCmsTest(true);
     }
 
-    /**
-     * @return void
-     */
     public function testSetNavigationNodeToInactiveWhenCmsIsInactive(): void
     {
         $this->runUpNavigationNodeCmsTest(false);
     }
 
-    /**
-     * @return void
-     */
     public function testDeleteCmsPageNavigationNodesIsSuccessful(): void
     {
         // Arrange
@@ -67,11 +58,6 @@ class CmsNavigationConnectorFacadeTest extends Unit
         }
     }
 
-    /**
-     * @param bool $isActive
-     *
-     * @return void
-     */
     protected function runUpNavigationNodeCmsTest(bool $isActive): void
     {
         // Arrange
@@ -89,11 +75,6 @@ class CmsNavigationConnectorFacadeTest extends Unit
         }
     }
 
-    /**
-     * @param bool|null $isActive
-     *
-     * @return \Generated\Shared\Transfer\CmsPageTransfer
-     */
     protected function createCmsPage(?bool $isActive = true): CmsPageTransfer
     {
         // Arrange
@@ -107,11 +88,6 @@ class CmsNavigationConnectorFacadeTest extends Unit
         ]);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CmsPageTransfer $cmsPageTransfer
-     *
-     * @return array
-     */
     protected function createNavigationNodesByCmsPage(CmsPageTransfer $cmsPageTransfer): array
     {
         $navigation = $this->tester->haveNavigation();

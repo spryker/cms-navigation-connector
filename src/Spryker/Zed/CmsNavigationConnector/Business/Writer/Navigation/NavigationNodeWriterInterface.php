@@ -9,10 +9,5 @@ namespace Spryker\Zed\CmsNavigationConnector\Business\Writer\Navigation;
 
 interface NavigationNodeWriterInterface
 {
-    /**
-     * @param int $idCmsPage
-     *
-     * @return void
-     */
     public function deleteNavigationNodesByIdCmsPage(int $idCmsPage): void;
 }

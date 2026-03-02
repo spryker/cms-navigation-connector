@@ -28,9 +28,6 @@ class CmsNavigationConnectorBusinessTester extends Actor
 {
     use _generated\CmsNavigationConnectorBusinessTesterActions;
 
-    /**
-     * @return \Spryker\Zed\Navigation\Business\NavigationFacadeInterface
-     */
     public function getNavigationFacade(): NavigationFacadeInterface
     {
         return $this->getLocator()->navigation()->facade();
